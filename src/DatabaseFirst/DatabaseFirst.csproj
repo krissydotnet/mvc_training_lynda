@@ -224,6 +224,7 @@
     <Content Include="Views\Tour\Details.cshtml" />
     <Content Include="Views\Tour\Edit.cshtml" />
     <Content Include="Views\Tour\Index.cshtml" />
+    <Content Include="Views\Tour\Difficult.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
