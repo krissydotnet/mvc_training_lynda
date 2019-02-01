@@ -15,8 +15,9 @@ namespace ExploreCalifornia.Controllers
         private myDbContext db = new myDbContext();
 
         // GET: Tour
-        public ActionResult Index()
+        public ActionResult Index(bool notifyUsers = false)
         {
+            ViewBag.NotifyUsers = notifyUsers;
             return View(db.Tours.ToList());
         }
 
@@ -48,11 +49,13 @@ namespace ExploreCalifornia.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Description,Length,Price,Rating,IncludesMeals")] Tour tour)
         {
+
             if (ModelState.IsValid)
             {
                 db.Tours.Add(tour);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                
+                return RedirectToAction("Index",new { notifyUsers = true });
             }
 
             return View(tour);
