@@ -8,7 +8,7 @@ namespace ExploreCalifornia.Models
 {
     public class myDbContext : DbContext
     {
-        public myDbContext() : base("ExploreCalifornia")
+        public myDbContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dukesc\source\repos\krissydotnet\mvc_training_lynda\src\ExploreCalifornia\ExploreCalifornia\App_Data\ExploreCalifornia.mdf;Integrated Security=True")
         {
 
         }

@@ -30,7 +30,6 @@ namespace DatabaseFirst.Controllers
                         orderby t.Name
                         select t;
             return View(tours.ToList());
-           
 
         }
 

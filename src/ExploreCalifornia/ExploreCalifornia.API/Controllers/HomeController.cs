@@ -4,23 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ExploreCalifornia.Controllers
+namespace ExploreCalifornia.API.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            
-            return View();
-        }
+            ViewBag.Title = "Home Page";
 
-        public ActionResult About()
-        {            
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
             return View();
         }
     }
